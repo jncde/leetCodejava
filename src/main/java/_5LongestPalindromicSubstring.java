@@ -92,38 +92,12 @@ public class _5LongestPalindromicSubstring {
     }
 
     //debug info
-    if(printDp)  printDPTable (len, dp);
+    if(printDp)  DynamicProgramming.printDPTable (dp,len,len);
 
     return s.substring (start,start+maxLen);
   }
 
-  private void printDPTable (int len, boolean[][] dp) {
-    String columSpace="  ";
-    int firstColMargin=4;
-    for(int row=0;row<len;row++){
 
-      if(row==0){
-        StringBuilder jHeader=new StringBuilder ();
-        jHeader.append ("i\\j    ".substring (0,firstColMargin));
-        for(int c=0;c<len;c++){
-          jHeader.append (c+columSpace);
-        }
-        System.out.println (jHeader.toString ());
-      }
-
-
-      StringBuilder sb=new StringBuilder ();
-      for(int c=0;c<len;c++) {
-        if(c==0){
-          sb.append ((row+"     ").substring (0,firstColMargin));
-        }
-
-        sb.append (dp[row][c]?1:0);
-        sb.append (columSpace);
-      }
-      System.out.println (sb.toString ());
-    }
-  }
 
   public String centerSpreadSolution (String s) {
 
