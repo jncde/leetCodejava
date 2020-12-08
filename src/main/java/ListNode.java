@@ -1,6 +1,6 @@
 public class ListNode implements Comparable<ListNode>{
 
-  ListNode next;
+  public ListNode next;
   int val;
   ListNode(int x) {val=x;}
 
@@ -10,9 +10,13 @@ public class ListNode implements Comparable<ListNode>{
   }
 
   public String toString() {
+  return String.format ("val: %s, next: %s",val,next==null?null:next.val);
+  }
+
+  public static String listString(ListNode l){
     StringBuilder s=new StringBuilder ();
     s.append ("[");
-    toString (s);
+    l.toString (s);
     s.append ("]");
     return s.toString ();
   }

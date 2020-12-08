@@ -49,7 +49,7 @@ public class _21MergeTwoSortedLists {
 
     ListNode listNode = mergeTwoLists (l1, l2);
 
-    Assert.assertEquals ("[ 1 1 2 3 4 4]",listNode.toString ());
+    Assert.assertEquals ("[ 1 1 2 3 4 4]",ListNode.listString (listNode));
 
   }
 
